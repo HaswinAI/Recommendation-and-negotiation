@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Fund Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Mutual Fund Assistant</div>
+        <nav>
+            <ul>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to the Mutual Fund Assistant</h1>
+        <p>Analyze and explore mutual funds with ease. Our tool provides detailed insights to help you make informed decisions.</p>
+
+        <!-- Text Input Section -->
+        <div id="text-input" class="input-section">
+            <h2>Enter Your Query</h2>
+            <textarea id="userText" placeholder="Type your message here..."></textarea><br>
+            <button id="submitBtn" class="button">Submit</button>
+        </div>
+
+        <!-- Summary Section -->
+        <div id="summarySection" class="summary-section">
+            <h2>Post-Call Summary</h2>
+            <button id="fetchSummaryBtn" class="button">Get Summary</button>
+            <div id="summaryOutput" class="output-box"></div>
+        </div>
+
+        <!-- Negotiation Section -->
+        <div id="negotiate" class="negotiation-section">
+            <h2>Enter Negotiation Details</h2>
+            <textarea id="negotiateText" placeholder="Type your negotiation offer or request here..."></textarea><br>
+            <button id="negotiateBtn" class="button">Get Suggestion</button>
+        </div>
+
+        <!-- Negotiation Suggestions -->
+        <div id="negotiationSuggestion" class="suggestion-box"></div>
+
+        <!-- Analysis Section -->
+        <div id="analysis" class="response-container"></div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mutual Fund Assistant. All rights reserved.</p>
+        <p>Follow us on <a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
